@@ -1,4 +1,5 @@
 #include "surfaceGrid.cpp"
+#include <stdlib.h>
 
 
 // Light 0
@@ -150,7 +151,7 @@ void myKeyHandler( unsigned char key, int x, int y) {
 
   if (key == 27) {
 	// Hitting ESC quits
-	//exit(1);
+	exit(1);
   }
 
   printf("\n key pressed is %c at (%d, %d)", key , x, y);
@@ -241,7 +242,7 @@ void myMenu( int value ) {
 	
 
 	if (value == 0) { // exit
-		//exit(1);
+		exit(1);
 	}
 
 
