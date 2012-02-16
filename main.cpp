@@ -36,7 +36,6 @@ const int FlatShade = 1;
 
 const int Gaussian= 2;
 const int Gabor = 3;
-// g++ -o run test.cpp -framework Glut -framework openGL
 
 
 int currChoice = WireFrame;
@@ -248,29 +247,25 @@ void myMenu( int value ) {
 
 }
 
-
-
-////////////////////////  main //////////////////////////////
-
 int main(int argc, char **argv) {
 
-  // GLUT init stuff
-  glutInit(&argc, argv);
-  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	// GLUT init stuff
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(640,480);// set window size
 	glutInitWindowPosition(100,150);// set window position on screen
-  glutCreateWindow("Interactive rotating surface");
+	glutCreateWindow("Interactive rotating surface");
 
-  glutDisplayFunc(display); // display callback
+	glutDisplayFunc(display); // display callback
 
-  glutKeyboardFunc(myKeyHandler); // keyborad callback
+	glutKeyboardFunc(myKeyHandler); // keyborad callback
 
-  glutMouseFunc(myMouseClickHandler); // mouse callback
+	glutMouseFunc(myMouseClickHandler); // mouse callback
 
-  glutMotionFunc(myMouseMotionHandler); // mouse move callback
+	glutMotionFunc(myMouseMotionHandler); // mouse move callback
 
 
-  // set up menu
+	// set up menu
 	const int MenuID = glutCreateMenu (myMenu); 
 	glutAddMenuEntry("Wireframe", 1);
 	glutAddMenuEntry("Shading", 2);
@@ -280,7 +275,7 @@ int main(int argc, char **argv) {
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 
 
-  init();
-  glutMainLoop();
-  return 0; 			/* ANSI C requires main to return int. */
+	init();
+	glutMainLoop();
+	return 0; 			/* ANSI C requires main to return int. */
 }
