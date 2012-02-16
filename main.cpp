@@ -257,6 +257,8 @@ int main(int argc, char **argv) {
   // GLUT init stuff
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	glutInitWindowSize(640,480);// set window size
+	glutInitWindowPosition(100,150);// set window position on screen
   glutCreateWindow("Interactive rotating surface");
 
   glutDisplayFunc(display); // display callback
