@@ -1,19 +1,11 @@
-// SurfaceGrid.cpp: implementation of the SurfaceGrid class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #include <fstream>
 #include <math.h>
 #include "surfaceGrid.h"
 
 using namespace std;
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
 SurfaceGrid::SurfaceGrid()  {
-	
+	//DUMMY CONSTRUCTOR
 }
 
 SurfaceGrid::SurfaceGrid(int numPointsX, int numPointsY )  {
@@ -31,7 +23,7 @@ void SurfaceGrid::initSurfacePoints( int _numPointsX, int _numPointsY ) {
 	vertex = new Vertex3D*[ numPointsX ];
 
 	for (int x=0; x< numPointsX; x++) {
-		vertex[x] = new Vertex3D[numPointsY];
+		vertex[x] = new Vertex3D[ numPointsY ];
 	}
 
 }

@@ -73,17 +73,10 @@ void display() {
   glutSwapBuffers();
 }
 
-
-/////////////////////////////  init //////////////////////////////
-
 void init(void) {
-
-
 
 	surface.initSurfacePoints(100,100);
 	surface.genGaussianSurface();
-
-	
 
   // Enable a 1st light   
   glLightfv(GL_LIGHT0, GL_AMBIENT, light_diffuse0);
